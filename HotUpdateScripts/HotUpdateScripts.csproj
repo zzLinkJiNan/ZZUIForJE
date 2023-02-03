@@ -1,0 +1,227 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">anycpu</Platform>
+    <ProjectGuid>{E461BAE8-B218-4AAE-8773-0C18C85110E4}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>HotUpdateScripts</RootNamespace>
+    <AssemblyName>HotUpdateScripts</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <Description>JEngine</Description>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|anycpu' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Assets\HotUpdateResources\Dll\Hidden~</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <LangVersion>latest</LangVersion>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|anycpu' ">
+    <Optimize>true</Optimize>
+    <OutputPath>..\Assets\HotUpdateResources\Dll\Hidden~</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <LangVersion>latest</LangVersion>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug-Windows|AnyCPU' ">
+    <Optimize>false</Optimize>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release-Windows|AnyCPU' ">
+    <Optimize>false</Optimize>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="JEngine\Core\JAction.cs" />
+    <Compile Include="JEngine\Core\JBehaviour.cs" />
+    <Compile Include="JEngine\Core\JExtensions.cs" />
+    <Compile Include="JEngine\Core\JObjectPool.cs" />
+    <Compile Include="JEngine\Core\JPrefab.cs" />
+    <Compile Include="JEngine\Core\JSaver.cs" />
+    <Compile Include="JEngine\Core\JValidation.cs" />
+    <Compile Include="JEngine\Core\Singleton.cs" />
+    <Compile Include="JEngine\ZZUI\Mask\Mask_Usual.cs" />
+    <Compile Include="JEngine\ZZUI\Panel\Panel_la2.cs" />
+    <Compile Include="JEngine\ZZUI\Panel\Panel_lalala.cs" />
+    <Compile Include="JEngine\ZZUI\Scene\Scene_MyMainScene.cs" />
+    <Compile Include="JEngine\ZZUI\Scene\Scene_Ttest.cs" />
+    <Compile Include="JEngine\ZZUI\ZZUICore\DotweenModel\DOTweenModuleAudio.cs" />
+    <Compile Include="JEngine\ZZUI\ZZUICore\DotweenModel\DOTweenModuleEPOOutline.cs" />
+    <Compile Include="JEngine\ZZUI\ZZUICore\DotweenModel\DOTweenModulePhysics.cs" />
+    <Compile Include="JEngine\ZZUI\ZZUICore\DotweenModel\DOTweenModulePhysics2D.cs" />
+    <Compile Include="JEngine\ZZUI\ZZUICore\DotweenModel\DOTweenModuleSprite.cs" />
+    <Compile Include="JEngine\ZZUI\ZZUICore\DotweenModel\DOTweenModuleUI.cs" />
+    <Compile Include="JEngine\ZZUI\ZZUICore\DotweenModel\DOTweenModuleUnityVersion.cs" />
+    <Compile Include="JEngine\ZZUI\ZZUICore\DotweenModel\DOTweenModuleUtils.cs" />
+    <Compile Include="JEngine\ZZUI\ZZUICore\UIAniUtil.cs" />
+    <Compile Include="JEngine\ZZUI\ZZUICore\UIEventListener.cs" />
+    <Compile Include="JEngine\ZZUI\ZZUICore\ZZCanvasManager.cs" />
+    <Compile Include="JEngine\ZZUI\ZZUICore\ZZMaskManager.cs" />
+    <Compile Include="JEngine\ZZUI\ZZUICore\ZZPanelManager.cs" />
+    <Compile Include="JEngine\ZZUI\ZZUICore\ZZSceneManager.cs" />
+    <Compile Include="JEngine\ZZUI\ZZUICore\ZZTipManager.cs" />
+    <Compile Include="JEngine\ZZUI\ZZUICore\ZZUIMaskBase.cs" />
+    <Compile Include="JEngine\ZZUI\ZZUICore\ZZUIMaskPort.cs" />
+    <Compile Include="JEngine\ZZUI\ZZUICore\ZZUIName.cs" />
+    <Compile Include="JEngine\ZZUI\ZZUICore\ZZUIPanelBase.cs" />
+    <Compile Include="JEngine\ZZUI\ZZUICore\ZZUIPanelPort.cs" />
+    <Compile Include="JEngine\ZZUI\ZZUICore\ZZUISceneBase.cs" />
+    <Compile Include="JEngine\ZZUI\ZZUICore\ZZUIScenePort.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="JEngine\Event\JEvent.cs" />
+    <Compile Include="JEngine\Event\EventEnum.cs" />
+    <Compile Include="JEngine\Event\EventAttributes.cs" />
+    <Compile Include="JEngine\Net\JWebSocket.cs" />
+    <Compile Include="JEngine\Examples\Core\ConvertDemo.cs" />
+    <Compile Include="JEngine\Examples\Core\CrossDomainDemo.cs" />
+    <Compile Include="JEngine\Examples\Core\InstantiateDemo.cs" />
+    <Compile Include="JEngine\Examples\Core\JBehaviourExample.cs" />
+    <Compile Include="JEngine\Examples\Data\DataClass.cs" />
+    <Compile Include="JEngine\Examples\Event\EventDemo.cs" />
+    <Compile Include="JEngine\Examples\Net\JWebSocketDemo.cs" />
+    <Compile Include="JEngine\Examples\UI\JUIExample.cs" />
+    <Compile Include="JEngine\UI\JUI.cs" />
+    <Compile Include="JEngine\Examples\Core\AntiCheatDemo.cs" />
+    <Compile Include="JEngine\Examples\Core\MultiInheritenceDemo.cs" />
+    <Compile Include="JEngine\Examples\Core\ClassBindDemo.cs" />
+    <Compile Include="JEngine\UI\JUIExtensions.cs" />
+    <Compile Include="JEngine\Examples\Core\ValidationDemo.cs" />
+    <Compile Include="JEngine\Examples\Core\AddOnDemo.cs" />
+    <Compile Include="BPath.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="DOTween">
+      <HintPath>JEngine\ZZUI\ZZUICore\DotweenModel\DOTween.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Dlls\UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AudioModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Dlls\UnityEngine.AudioModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Physics2DModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Dlls\UnityEngine.Physics2DModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.PhysicsModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Dlls\UnityEngine.PhysicsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UIModule">
+      <HintPath>Dlls\UnityEngine.UIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>Dlls\UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TextRenderingModule">
+      <HintPath>Dlls\UnityEngine.TextRenderingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="System" />
+    <Reference Include="UnityEngine.UI">
+      <HintPath>Dlls\UnityEngine.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Monetization">
+      <HintPath>..\Library\ScriptAssemblies\UnityEngine.Monetization.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.XR.LegacyInputHelpers">
+      <HintPath>..\Library\ScriptAssemblies\UnityEngine.XR.LegacyInputHelpers.dll</HintPath>
+    </Reference>
+    <Reference Include="ILRuntime">
+      <HintPath>..\Library\ScriptAssemblies\ILRuntime.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.TextMeshPro">
+      <HintPath>..\Library\ScriptAssemblies\Unity.TextMeshPro.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Timeline">
+      <HintPath>..\Library\ScriptAssemblies\Unity.Timeline.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Advertisements">
+      <HintPath>..\Library\ScriptAssemblies\UnityEngine.Advertisements.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SpatialTracking">
+      <HintPath>..\Library\ScriptAssemblies\UnityEngine.SpatialTracking.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TestRunner">
+      <HintPath>..\Library\ScriptAssemblies\UnityEngine.TestRunner.dll</HintPath>
+    </Reference>
+    <Reference Include="WebSocketSharp">
+      <HintPath>..\Library\ScriptAssemblies\WebSocketSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>..\Library\ScriptAssemblies\Assembly-CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Ben.Demystifier">
+      <HintPath>..\Assets\Dependencies\Ben.Demystifier\Ben.Demystifier.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Proto2cs\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Dlls\UnityEngine.AudioModule.dll" />
+    <Content Include="Dlls\UnityEngine.CoreModule.dll" />
+    <Content Include="Dlls\UnityEngine.CoreModule.pdb" />
+    <Content Include="Dlls\UnityEngine.dll" />
+    <Content Include="Dlls\UnityEngine.Physics2DModule.dll" />
+    <Content Include="Dlls\UnityEngine.PhysicsModule.dll" />
+    <Content Include="Dlls\UnityEngine.TextRenderingModule.dll" />
+    <Content Include="Dlls\UnityEngine.TextRenderingModule.pdb" />
+    <Content Include="Dlls\UnityEngine.UI.dll" />
+    <Content Include="Dlls\UnityEngine.UI.pdb" />
+    <Content Include="Dlls\UnityEngine.UIModule.dll" />
+    <Content Include="Dlls\UnityEngine.UIModule.pdb" />
+    <Content Include="JEngine\ZZUI\ZZUICore\DotweenModel\DOTween.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="JEngine\ZZUI\Mask\Mask_Usual.cs.meta" />
+    <None Include="JEngine\ZZUI\Panel\Panel_la2.cs.meta" />
+    <None Include="JEngine\ZZUI\Panel\Panel_lalala.cs.meta" />
+    <None Include="JEngine\ZZUI\Scene\Scene_MyMainScene.cs.meta" />
+    <None Include="JEngine\ZZUI\Scene\Scene_Ttest.cs.meta" />
+    <None Include="JEngine\ZZUI\ZZUICore\DotweenModel\DOTween.dll.meta" />
+    <None Include="JEngine\ZZUI\ZZUICore\DotweenModel\DOTweenModuleAudio.cs.meta" />
+    <None Include="JEngine\ZZUI\ZZUICore\DotweenModel\DOTweenModuleEPOOutline.cs.meta" />
+    <None Include="JEngine\ZZUI\ZZUICore\DotweenModel\DOTweenModulePhysics.cs.meta" />
+    <None Include="JEngine\ZZUI\ZZUICore\DotweenModel\DOTweenModulePhysics2D.cs.meta" />
+    <None Include="JEngine\ZZUI\ZZUICore\DotweenModel\DOTweenModuleSprite.cs.meta" />
+    <None Include="JEngine\ZZUI\ZZUICore\DotweenModel\DOTweenModuleUI.cs.meta" />
+    <None Include="JEngine\ZZUI\ZZUICore\DotweenModel\DOTweenModuleUnityVersion.cs.meta" />
+    <None Include="JEngine\ZZUI\ZZUICore\DotweenModel\DOTweenModuleUtils.cs.meta" />
+    <None Include="JEngine\ZZUI\ZZUICore\ZZCanvasManager.cs.meta" />
+    <None Include="JEngine\ZZUI\ZZUICore\ZZMaskManager.cs.meta" />
+    <None Include="JEngine\ZZUI\ZZUICore\ZZPanelManager.cs.meta" />
+    <None Include="JEngine\ZZUI\ZZUICore\ZZSceneManager.cs.meta" />
+    <None Include="JEngine\ZZUI\ZZUICore\ZZTipManager.cs.meta" />
+    <None Include="JEngine\ZZUI\ZZUICore\ZZUIMaskBase.cs.meta" />
+    <None Include="JEngine\ZZUI\ZZUICore\ZZUIMaskPort.cs.meta" />
+    <None Include="JEngine\ZZUI\ZZUICore\ZZUIName.cs.meta" />
+    <None Include="JEngine\ZZUI\ZZUICore\ZZUIPanelBase.cs.meta" />
+    <None Include="JEngine\ZZUI\ZZUICore\ZZUISceneBase.cs.meta" />
+    <None Include="JEngine\ZZUI\ZZUICore\ZZUIScenePort.cs.meta" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ProjectExtensions>
+    <MonoDevelop>
+      <Properties>
+        <Policies>
+          <StandardHeader IncludeInNewFiles="True" Text="&#xA;${FileName}&#xA; &#xA;Author:&#xA;      ${AuthorName} &lt;${AuthorEmail}&gt;&#xA;&#xA;Copyright (c) ${Year} ${CopyrightHolder}&#xA;&#xA;Permission is hereby granted, free of charge, to any person obtaining a copy&#xA;of this software and associated documentation files (the &quot;Software&quot;), to deal&#xA;in the Software without restriction, including without limitation the rights&#xA;to use, copy, modify, merge, publish, distribute, sublicense, and/or sell&#xA;copies of the Software, and to permit persons to whom the Software is&#xA;furnished to do so, subject to the following conditions:&#xA;&#xA;The above copyright notice and this permission notice shall be included in&#xA;all copies or substantial portions of the Software.&#xA;&#xA;THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR&#xA;IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,&#xA;FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE&#xA;AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER&#xA;LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,&#xA;OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN&#xA;THE SOFTWARE." />
+        </Policies>
+      </Properties>
+    </MonoDevelop>
+  </ProjectExtensions>
+</Project>
